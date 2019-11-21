@@ -1,0 +1,11 @@
+<div class="jumbotron bg-secondary">
+    <form #search="ngForm"(ngSubmit)="onSubmit(search)">
+        
+        <h1>Find A Movie</h1>
+        <input name="movie-name" placeholder="input movie's name " style="width:100%;
+        border-radius:25px; font-size: 30px; height:100px"ngModel>
+        &nbsp;
+        <button type="submit"class="btn-lg btn-dark "><h2>Find</h2></button>
+        
+    </form>
+</div>

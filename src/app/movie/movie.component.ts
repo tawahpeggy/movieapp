@@ -8,6 +8,7 @@ import { MovieService } from '../movie.service';
 })
 export class MovieComponent implements OnInit {
   popularmovie:any=[];
+  public image:string = "https://image.tmdb.org/t/p/w600_and_h900_bestv2";
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {

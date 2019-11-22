@@ -1,38 +1,36 @@
-<!-- <div class="container">
-        <h2>Card Image</h2>
-        <p>Image at the top (card-img-top):</p>
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">John Doe</h4>
-            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
-          </div>-->
-        <div class="bg-dark"> 
-        <div class="jumbotron " class="bg-dark">
-            
-        <h1 class="bg-secondary"> <marquee> Popular Movies</marquee></h1>
-        <div  class="card" *ngFor="let PopularMovie of popularmovie">
-                <div class="container">
-                <div class="row">
-                <div class="col-sm-3">
-       
-       <img src="" class="card-img-top" alt="no image">
-       <div class="card-body">
-      <div class="class-text">
-        <h2>{{PopularMovie.title}}</h2>
-        <h3>Date:{{PopularMovie.release_date}}</h3>
-        <button class="btn btn-success">view details</button>
-      </div>
-      </div>
-      </div>
-      </div>
-     </div>
-      </div>
-      </div>
-      </div>
+<div class="bg-dark">
+    <div class="jumbotron " class="bg-dark">
 
-      <!-- <h1>Popular Movies</h1>
+        <h1 class="bg-secondary">
+            <marquee> Popular Movies</marquee>
+        </h1>
+
+<div class="container-fluid">
+
+            <div class="row">
+                <div class="bg-dark text-light card col-sm-6 col-md-3 col-lg-3" *ngFor="let PopularMovie of popularmovie">
+
+                    <img [src]="image + PopularMovie.poster_path " class="card-img-top" alt="no image">
+                    <div class="card-body">
+                        <div class="class-text">
+                            <h2>{{PopularMovie.title}}</h2>
+                            <h3>Release Date:{{PopularMovie.release_date}}</h3>
+                            <button class="btn btn-success">view details</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<!-- <h1>Popular Movies</h1>
       <div  class="card" *ngFor="let PopularMovie of popularmovie" style="width: 18rem;">
           <h1>{{ PopularMovie.original_title }}</h1>
     </div> -->

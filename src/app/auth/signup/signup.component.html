@@ -1,0 +1,32 @@
+
+<div *ngIf="isLoading">
+<app-spinner> </app-spinner>
+</div>
+    <div class="alert alert-danger" *ngIf="error">
+        
+        <p> <i class="fas fa-times"></i> {{ error }}</p>
+    </div>
+    <div class="alert alert-success" *ngIf="successfulSignup">
+        
+        <p> <i class="fas fa-check"></i> {{ successfulSignup }}</p>
+    </div>
+
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)"*ngIf="!isLoadong">
+    <!-- <div class="form-group">
+    <h2>username</h2>
+<input classs="form-control" name="name" id="name" placeholder="username" type="name" ngModel required>
+</div> -->
+<div class="form-group">
+<h2>Email</h2>
+<input name="email" class="form-control" id="email" placeholder="email" type="email" ngModel required>
+</div>
+<div class="form-group">
+<h2>password</h2>
+<input  name="password" class="form-control" type="password" placeholder="password"minlength="6" maxlength="8" ngModel required>
+</div>
+<div class="form-group">
+<h2>Retype password</h2>
+<input name="password" id="password" class="form-control" placeholder="password" type="password" minlength="6" maxlength="8" ngModel required>
+</div>
+<button class= "btn btn-primary" [disabled]="!signupForm.value" type="submit"> Submit </button>
+</form>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm,FormGroup } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   error: string;
   successfulSignup: string;
 
-constructor(private authService: AuthService) {  }
+constructor(private authService: AuthService, private router :Router) {  }
 onSubmit(form: NgForm){
  
 
@@ -21,6 +22,7 @@ const email= form.value.email;
 this.authService.login(email, password,).subscribe (resData => {
 console.log(resData);
 console.log(this.successfulSignup);
+// this.router.navigate(['/movies'])
 this.successfulSignup="congratulations you have successfully logged in";
 this.isLoading=false;
 },

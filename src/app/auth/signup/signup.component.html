@@ -1,32 +1,59 @@
-
-<div *ngIf="isLoading">
-<app-spinner> </app-spinner>
-</div>
+<div class="body">
+        <h1 style="text-align: center;"> MOVIEAPP </h1>
+    <div *ngIf="isLoading">
+        <app-spinner> </app-spinner>
+    </div>
     <div class="alert alert-danger" *ngIf="error">
-        
+
         <p> <i class="fas fa-times"></i> {{ error }}</p>
     </div>
     <div class="alert alert-success" *ngIf="successfulSignup">
-        
+
         <p> <i class="fas fa-check"></i> {{ successfulSignup }}</p>
     </div>
 
-<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)"*ngIf="!isLoadong">
-    <!-- <div class="form-group">
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)" *ngIf="!isLoadong">
+        <!-- <div class="form-group">
     <h2>username</h2>
 <input classs="form-control" name="name" id="name" placeholder="username" type="name" ngModel required>
 </div> -->
-<div class="form-group">
-<h2>Email</h2>
-<input name="email" class="form-control" id="email" placeholder="email" type="email" ngModel required>
+        <div class="container  signupbox">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1> What you get for signing up into the MOVIEAPP</h1>
+                    <h3>
+                        <p> <i class="fa fa-check" aria-hidden="true"></i> View popular movies</p>
+                        <p> <i class="fa fa-check" aria-hidden="true"></i>view trending movies</p>
+                        <p> <i class="fa fa-check" aria-hidden="true"></i>view every movie detail</p>
+                        <p> <i class="fa fa-check" aria-hidden="true"></i>download movies</p>
+                    </h3>
+                </div>
+                <div class="col-md-6">
+                    <h1>Register</h1>
+                    <div class="form-group">
+                        <img src="../../../assets/images/avarter.png" class="avarter" alt="no avarter">
+                        <h2>Email</h2>
+                        <input name="email" class="form-control" id="email" placeholder="email" type= "email" ngModel
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <h2>password</h2>
+                        <input name="password" class="form-control" type="password" placeholder="password" minlength="6"
+                            maxlength="8" ngModel required>
+                    </div>
+                    <div class="form-group">
+                        <h2>Retype password</h2>
+                        <input name="password" id="password" class="form-control" placeholder="password" type="password"
+                            minlength="6" maxlength="8" ngModel required>
+                    </div>
+                    <!-- <button class="btn btn-primary" [disabled]="!signupForm.value" type="submit"> Submit </button> -->
+                    <input type="submit"value="signup">
+                     
+                    Aready have an account?<button routerLink="/login" class="btn btn-primary">login</button>
+                signup instead with<button class="btn btn-primary">Gmail</button> or <button class="btn btn-primary">Facebook</button>
+            </div>
+        </div>
+        </div>
+
+    </form>
 </div>
-<div class="form-group">
-<h2>password</h2>
-<input  name="password" class="form-control" type="password" placeholder="password"minlength="6" maxlength="8" ngModel required>
-</div>
-<div class="form-group">
-<h2>Retype password</h2>
-<input name="password" id="password" class="form-control" placeholder="password" type="password" minlength="6" maxlength="8" ngModel required>
-</div>
-<button class= "btn btn-primary" [disabled]="!signupForm.value" type="submit"> Submit </button>
-</form>

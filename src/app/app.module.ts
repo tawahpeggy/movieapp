@@ -12,6 +12,9 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { SpinnerComponent } from '../app/shared/loading-spinner/spinner.component';
+import { TheatremoviesComponent } from './theatremovies/theatremovies.component';
+import { HomeComponent } from './home/home.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SpinnerComponent } from '../app/shared/loading-spinner/spinner.componen
     SignupComponent,
     LoginComponent,
     LogoutComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    TheatremoviesComponent,
+    HomeComponent,
+    CarouselComponent
 
   ],
   imports: [

@@ -1,1 +1,6 @@
-<p>logout works!</p>
+<div class="alert alert-primary" *ngIf="successfullogout">
+    <p> <i class="fas fa-check"></i> {{ successfullogout }}</p>
+</div>
+
+ARE U SURE ULL LIKE TO LOGOUT?
+<button class="btn-danger">yes</button> <button class='btn-primary' click="onLogout()">no</button>

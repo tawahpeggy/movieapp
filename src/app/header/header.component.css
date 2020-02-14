@@ -1,7 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap');
+
 #header{
     font-size: 30px;
 
 };
   #dropdown{
       float:right;
+  }
+  .dropdown-menu{
+      cursor:pointer;
+  }
+  
+  .left{
+float: left ;
+font-family: 'Dancing Script', cursive;
+color:#8AC926
+  }
+  .right{
+float: right;
+color:#0E402D;
+font-family: 'Pacifico', cursive;
+cursor: pointer;
+
+  }
+  .center{
+      text-align: center;
+      color:#0E402D;
+      font-family: 'Pacifico', cursive;
+      cursor: pointer;
+
+
   }

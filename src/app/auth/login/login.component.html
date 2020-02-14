@@ -1,28 +1,39 @@
+<div class="body main_container">
+      
+        <div *ngIf="isLoading">
+            <app-spinner> </app-spinner>
+        </div>
 
-<div *ngIf="isLoading">
-    <app-spinner> </app-spinner>
-</div>
+        <div class="alert alert-warning" *ngIf="successfulSignup">
+            <p> <i class="fas fa-check"></i> {{ successfulSignup }}</p>
+        </div>
+        <div class="alert alert-danger " *ngIf="error">
+            <p> <i class="fas fa-times"></i> {{ error }}</p>
+        </div>
+        <form class="login-box" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                <div class="header_main">
+                        <h1>MOVIE-APP</h1>
+                    </div>
+            <div class="form-group textbox">
+                <h2 for="email">Email</h2>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input class="text-box" type="email" placeholder="Email" name="email" ngModel required email>
+            </div>
+            <div class="form-group textbox">
+                <h2>Password</h2>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input class="textbox" name="password" type="password" placeholder="password" required maxlength="8" minlength="6"
+                    ngModel>
+           </div>
+            <div class="form-group">
+                <a><button routerLink="/home"  class="btn btn-primary" type="submit" [disabled]="!authForm.valid">Login </button></a>
+            </div> 
 
-<div class ="alert alert-warning" *ngIf="successfulSignup">
-    <p> <i class="fas fa-check"></i> {{ successfulSignup }}</p>
-</div>
-<div  class= "alert alert-danger "*ngIf="error">
-    <p> <i class="fas fa-times"></i> {{ error }}</p>
-</div>
-<form #authForm="ngForm" (ngSubmit)= onSubmit(authForm)>
-    <div class="form-group">
-<h2 for="email">Email</h2>
-<input type="email" placeholder="Email" name="email"  ngModel required email>
-</div>
-<div class="form-group">
-<h2 for="password">Password</h2>
-<input name="password"type="password" placeholder="password" required maxlength="8" minlength="6"ngModel>
-</div>
-<div class="form-group">
-<button class="btn btn-primary" type=
-"submit"  [disabled]="!authForm.valid" >Login </button>
-</div>
-signin instead with <button class="btn btn-primary"> facebook</button> or <button class="btn btn-primary"><i class="fa fa-google" aria-hidden="true"></i>Gmail</button>
-<small>forgot password?<button class="btn btn-danger" > Remember me</button></small>
-<small>dont have an account?<button class="btn btn-primary" > Register here</button></small>
-</form> 
+            <h3>signin instead with</h3>  <a> <button class="btn btn-primary"> <i class="fab fa-facebook"></i>facebook </button> </a>
+            <h3>or</h3>
+            <button class="btn btn-primary"> <i class="fas fa-envelope-square"></i>Gmail </button>
+            <p>forgot password?<button class="btn btn-danger"> Remember me</button></p>
+            <p>dont have an account?<button class="btn btn-primary"> Register here</button></p>
+        </form>
+    </div>
+

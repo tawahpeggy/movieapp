@@ -1,4 +1,91 @@
-.p{
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Baskerville&display=swap');
+.body{
     text-align: center;
     font:300px;
+    background-image: linear-gradient(rgba(0, 0, 0,0.1), rgba(160, 88, 88, 0.5)),url('../../../assets/images/Untitledes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    padding:0;
+    margin:0;
+    background-position:center;
 }
+.body h1{
+    font-family: 'Abril Fatface', cursive;
+    text-align:center;
+    margin:20px;
+    padding:20px;
+    color: black;
+}
+.col-md-6,.h3{
+    font-family: 'Libre Baskerville', serif;
+    text-align:center;
+    border:2px solid #989C94;
+    color:black;
+}
+.signupbox{
+    width: 800px;
+    height:600px;
+    color:rgb(59, 46, 46);
+    top: 50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    background-color:white;
+}
+    /* box-sizing : border-box; */
+.avarter{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position:absolute;
+    top:-50px;
+    left:calc(50% -50px)
+
+}
+.signupbox p{
+
+margin:0;
+padding:0;
+font-weight:bold;
+width:200px;
+
+}
+.signupbox input{
+    width:100;
+    margin-bottom:20px;
+}
+ .signupbox input[type="email"],input[type="password"] {
+     border:none;
+     border-bottom:1px solid #fff;
+     background:transparent;
+     outline:none;
+     height:40px ;
+     color:black;
+     font-size:16px;
+}
+.signupbox input[type="submit"]
+{
+    border:none;
+    outline:none;
+    background:#fb2525;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+}
+.signupbox input{
+cursor:pointer;
+
+color:#0000;
+}
+ .signupbox a , .btn {
+     text-decoration:none;
+     font-size: 12px;
+     line-height:20px;
+     color:darkgrey
+    }
+    .signup a:hover{
+        color: #ffc107;
+    }
+
+

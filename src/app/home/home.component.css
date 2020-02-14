@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+.home{
+    text-align:center;
+    font-family: 'Ibarra Real Nova', serif;
+    color:white;
+    background: url(../../assets/images/woman-wearing-white-shirt-standing-near-rack-2220314.jpg) ;
+    background-size:100vh;
+    background-position: center;
+}

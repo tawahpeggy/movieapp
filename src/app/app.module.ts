@@ -15,6 +15,7 @@ import { SpinnerComponent } from '../app/shared/loading-spinner/spinner.componen
 import { TheatremoviesComponent } from './theatremovies/theatremovies.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CarouselComponent } from './home/carousel/carousel.component';
     SpinnerComponent,
     TheatremoviesComponent,
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent
 
   ],
   imports: [

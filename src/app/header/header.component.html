@@ -1,57 +1,29 @@
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header">
-
-    <a class="navbar-brand"> <img src="src\favicon.ico" >Ma</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link"style="cursor:pointer;" routerLink="/home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/popularmovies">Popular Movies</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/theatremovies">Movies in theatre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/signup">Signup</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/login">login</a>
-            </li>
-
-            <div class="dropdown dropdown-right">
-                <button style="margin-right:2rem;"class="btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-                         User Name
-                </button>
-     
-                     <div class="dropdown-menu  bg-info">
-                         <a class="dropdown-item" href="#">settings</a>
-                         <a class="dropdown-item">Support Us</a>
-                         <a  routerLink="/logout"class="dropdown-item">logout</a>
-                     </div>
-
-            </div>
-
-        </ul>
-    </div>
-
-
-</nav> -->
-<h2>
-    <span class="left">MOVIE-APP</span></h2> 
-    <span routerLink="/home" style="font-size:30px;cursor:pointer" >&#9776; </span>
-    <a routerLink="/login" class="right"> <h3>Login </h3></a> &nbsp;
-<a routerLink="/signup"class="right"><h2> Register</h2> </a>
-<option>
-    setting
-    <select>Support Us</select>
-    <select routerLink="/logout"class="dropdown-item">logout</select>
-</option>
-    <span routerLink="/popularmovies"class="center"><h2> Movies</h2></span>
-
-    
+    <header>
+        <h1 >
+            <marquee> Welcome to the Movie App </marquee>
+            <p>Where there's a solution to all the movie issues you can ever encounter</p>
+        </h1>
+        <nav id='cssmenu'>
+        <div class="left"><a>MOVIE-APP </a></div>
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+    <ul>
+        <li class='active'><a href='#'>&#9776;</a></li>
+        <li><a href='#'>ABOUT</a></li>
+        <li><a href='#'>BIO</a></li>
+    <li>  <a routerLink="/popularmovies"> MOVIES </a></li>
+        <li><a href='#'>GALLERY</a></li>
+        <li><a href='#'>CONTACT</a></li>
+        <li><a routerLink="/login"> Login </a> </li>
+      <li>  <button class=" btn btn-primary " routerLink="/signup"> Register </button></li>
+        <li><a href='#'>PROFILE</a>
+            <ul>
+               <li><a href='#'>Settings</a> </li>
+               <li><a href='#'>Support-US</a></li>
+               <li><a href='#'>Logout</a></li>
+            </ul>
+         </li>
+    </ul>
+        </nav>
+        </header>
+       
